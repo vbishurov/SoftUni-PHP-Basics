@@ -1,0 +1,38 @@
+form {
+    width: 550px;
+    display: inline-block;
+}
+
+input[type="text"].displayInline {
+    display: inline-block;
+}
+
+input[type="text"] {
+    display: block;
+}
+
+p {
+    margin: 0;
+}
+
+.addRemove {
+    margin-top: 5px;
+}
+
+a {
+    background: lightgray;
+    border-radius: 5px;
+    padding: 2px 3px;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.CV {
+    display: inline-block;
+}
+
+.CV table, .CV th, .CV td {
+    border: 1px solid black;
+}
