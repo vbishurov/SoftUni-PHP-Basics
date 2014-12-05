@@ -1,13 +1,13 @@
 <?php
-//$text = preg_split('//',$_GET['text']);
-//$hashValue = $_GET['hashValue'];
-//$fontSize = $_GET['fontSize'];
-//$style = $_GET['style'];
-$text = preg_split('//','Warning: Our encryption is unbreakable and you will not be able to decrypt your information!', NULL, PREG_SPLIT_NO_EMPTY);
-$hashValue = '1';
-$fontSize = '30';
-$style = 'bold';
-
+$text = preg_split('//', $_GET['text'], NULL, PREG_SPLIT_NO_EMPTY);
+$hashValue = $_GET['hashValue'];
+$fontSize = $_GET['fontSize'];
+$style = $_GET['fontStyle'];
+if ($style == 'bold') {
+    $style = 'font-weight:bold;';
+} else {
+    $style = "font-style:$style;";
+}
 for ($i = 0; $i < count($text); $i++) {
     $currentChar = ord($text[$i]);
     if ($i % 2 == 0) {
@@ -15,7 +15,9 @@ for ($i = 0; $i < count($text); $i++) {
     } else {
         $nextChar = $currentChar - intval($hashValue);
     }
-    echo chr($nextChar);
+    $text[$i] = chr($nextChar);
 }
+$text = implode('', $text);
+echo '<p style="font-size:' . $fontSize . ';' . $style . '">' . $text . '</p>';
 ?>
  
