@@ -174,6 +174,8 @@ if (preg_match('/^[a-zA-Z]{2,20}$/', $firstName) && preg_match('/^[a-zA-Z]{2,20}
     } else {
         echo '<br/>The information is invalid!';
     }
+} else {
+    echo '<br/>The information is invalid!';
 }
 ?>
     <script src="main.js"></script>
