@@ -5,3 +5,30 @@ table {
 td {
     border: 1px solid black;
 }
+
+aside {
+    margin-bottom: 10px;
+    clear: both;
+    float: right;
+    width: 150px;
+    font-family: Arial, Tahoma, sans-serif;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    background: #A0BBDF;
+}
+
+aside h2 {
+    font-size: 22px;
+    border-bottom: 1px solid #5c5c5c;
+    width: 100%;
+    padding-left: 5px;
+}
+
+aside li {
+    list-style-type: circle;
+}
+
+aside a, a:active, a:hover, a:visited {
+    color: #000000;
+}
